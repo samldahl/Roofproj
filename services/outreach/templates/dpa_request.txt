@@ -1,0 +1,29 @@
+Subject: Minnesota Data Practices Act Request — Reroof Permits, {{ city_name }}
+
+To Whom It May Concern,
+
+Pursuant to the Minnesota Government Data Practices Act, Minn. Stat. § 13.03,
+I respectfully request copies of public records concerning single-family
+residential reroofing permits issued by the City of {{ city_name }} from
+{{ start_date }} to the present.
+
+For each permit, the requested fields are:
+  - Permit number
+  - Property address
+  - Date issued
+  - Contractor name and license number (if recorded)
+  - Stated valuation
+  - Permit status
+
+A spreadsheet (XLSX or CSV) emailed as an attachment to this address is the
+preferred format. If staff time will be required to fulfill this request,
+please provide a written estimate of cost before any chargeable work is done.
+
+Per § 13.03 subd. 3(c), I would appreciate a response within ten business
+days indicating whether the data can be provided and any associated cost.
+
+Thank you for your assistance.
+
+Sincerely,
+{{ sender_name }}
+{{ sender_email }}

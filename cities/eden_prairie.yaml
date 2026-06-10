@@ -1,0 +1,24 @@
+slug: eden_prairie
+name: Eden Prairie
+state: MN
+strategy: email_reply
+contact_email: permits@edenprairie.org
+auto_send: false
+status: active
+
+column_aliases:
+  "Permit Number": permit_number
+  "Permit#": permit_number
+  "Address": address_raw
+  "Site Address": address_raw
+  "Issue Date": issue_date
+  "Date Issued": issue_date
+  "Contractor": contractor_name
+  "Contractor Name": contractor_name
+  "Valuation": valuation
+  "Job Value": valuation
+  "Work Description": work_type
+  "Status": status
+
+notes: |
+  Replies to DPA requests with XLSX attachment via email.

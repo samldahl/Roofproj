@@ -1,0 +1,27 @@
+slug: excelsior
+name: Excelsior
+state: MN
+strategy: email_reply
+vendor: unknown
+contact_email: jlong@excelsiormn.org
+contact_name: Jess Long
+auto_send: false
+status: active
+data_starts_at: 2020
+paid_pre_data_available: true
+paid_records_cost_note: Pre-2020 requires in-person review session, no quote yet
+centroid:
+- -93.5666
+- 44.9036
+column_aliases:
+  PERMIT: permit_number
+  'Unnamed: 1': issue_date
+  'Unnamed: 2': contractor_name
+  'Unnamed: 3': address_raw
+  COST: valuation
+notes: 'Straightforward XLSX-by-email intake. Two-stage: 2020-2026 already received;
+
+  2005-2020 requires booking an in-person review.
+
+  '
+header_row: 0

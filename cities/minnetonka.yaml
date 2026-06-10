@@ -1,0 +1,54 @@
+slug: minnetonka
+name: Minnetonka
+state: MN
+strategy: portal_scrape
+vendor: tyler_epermits
+contact_email: permits@minnetonkamn.gov
+auto_send: false
+status: active
+
+data_starts_at: 2005
+paid_pre_data_available: false
+
+centroid: [-93.4687, 44.9133]
+
+portal_config:
+  url: https://eservices.minnetonkamn.gov/EnerGov_Prod/SelfService
+  search_path: /#/permit/permitSearch
+  filters:
+    permit_type: Building
+    work_type: Maintenance/Repair
+    issued_from: "01/01/2005"
+    issued_to: today
+
+# Literal instructions from the city's email — what a human or script does.
+portal_steps:
+  - "Open Home - City of Minnetonka | ePermits"
+  - "Click 'Search for Permit' on the left"
+  - "Permit Type: Building"
+  - "Work Type: Maintenance/Repair"
+  - "Issued From: 01/01/2005"
+  - "Issued To: today"
+  - "Click 'Search'"
+  - "Click the green X icon at the top of the spreadsheet to convert to Excel"
+
+column_aliases:
+  "Permit Number": permit_number
+  "Permit #": permit_number
+  "Address": address_raw
+  "Site Address": address_raw
+  "Issue Date": issue_date
+  "Issued": issue_date
+  "Completion Date": completion_date
+  "Contractor": contractor_name
+  "Contractor Name": contractor_name
+  "Contractor License": contractor_license
+  "Valuation": valuation
+  "Job Value": valuation
+  "Status": status
+  "Work Type": work_type
+  "Parcel ID": parcel_id
+
+notes: |
+  Tyler EnerGov / ePermits portal. Reference implementation for the Tyler vendor adapter —
+  any other Tyler city should reuse the same Playwright code, only the URL changes.

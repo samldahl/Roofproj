@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Permit",
+  "type": "object",
+  "required": ["city_id", "permit_number", "address", "issue_date", "source_file_s3"],
+  "properties": {
+    "city_id": { "type": "string", "description": "slug, e.g. 'minnetonka'" },
+    "permit_number": { "type": "string" },
+    "address": { "type": "string", "description": "normalized single-line address" },
+    "address_raw": { "type": "string" },
+    "parcel_id": { "type": ["string", "null"] },
+    "issue_date": { "type": "string", "format": "date" },
+    "completion_date": { "type": ["string", "null"], "format": "date" },
+    "contractor_name": { "type": ["string", "null"] },
+    "contractor_license": { "type": ["string", "null"] },
+    "valuation": { "type": ["number", "null"] },
+    "status": { "type": ["string", "null"] },
+    "work_type": { "type": ["string", "null"], "description": "reroof/repair/etc" },
+    "location": {
+      "type": ["object", "null"],
+      "description": "GeoJSON Point, [lng, lat]",
+      "properties": {
+        "type": { "const": "Point" },
+        "coordinates": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      }
+    },
+    "source_file_s3": { "type": "string" },
+    "raw_row_json": { "type": "object" },
+    "ingested_at": { "type": "string", "format": "date-time" }
+  }
+}
